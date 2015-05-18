@@ -1,0 +1,16 @@
+{
+  "name": "js-drinking",
+  "version": "1.0.0",
+  "description": "The Javascript drinking game for web devs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Frank Petrilli",
+  "license": "GPL",
+  "dependencies": {
+    "express": "*",
+    "request": "*",
+    "body-parser": "*"
+  }
+}
