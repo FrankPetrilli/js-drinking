@@ -11,6 +11,7 @@
   "dependencies": {
     "express": "*",
     "request": "*",
-    "body-parser": "*"
+    "body-parser": "*",
+    "pg": "*"
   }
 }
