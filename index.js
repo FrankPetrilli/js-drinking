@@ -31,22 +31,23 @@ function updateWords() {
 router.route('/exists/:packagename').get(function(req, res) {
 	console.log('searching for ' + req.params.packagename);
 	var link = 'https://www.npmjs.com/package/' + req.params.packagename;
-	var exists = (response.statusCode < 400);
 
-	pg.connect(process.env.DATABASE_URL, function(err, client, done) {
-		if (!err) {
-			if (exists) {
-				client.query('UPDATE stats SET count = count + 1 WHERE exists=true');
-			} else {
-				client.query('UPDATE stats SET count = count + 1 WHERE exists=false');
-			}
-		} else {
-			console.error('error: ' + err);
-		}
-		done();
-	});
-	
 	request(link, function(err, response) {
+
+		pg.connect(process.env.DATABASE_URL, function(err, client, done) {
+			if (!err) {
+				if (exists) {
+					client.query('UPDATE stats SET count = count + 1 WHERE exists=true');
+				} else {
+					client.query('UPDATE stats SET count = count + 1 WHERE exists=false');
+				}
+			} else {
+				console.error('error: ' + err);
+			}
+			done();
+		});
+
+		var exists = (response.statusCode < 400);
 		res.json({
 			success: !err,
 			exists: exists,
