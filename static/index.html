@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
+    <script src="drinking.js"></script>
+</head>
+<body>
+    <h1>Javascript Drinking Game</h1>
+    <div class="rules">
+        <p>Drinking game for web devs:</p>
+        <ul>
+            <li>(1) Think of a noun</li>
+            <li>(2) Google "<noun>.js"</li>
+            <li>(3) If a library with that name exists - drink.</li>
+        </ul>
+        <h5>--@ironshay</h5>
+    </div>
+    <div class="rules">
+        <p><pre>LET'S GO</pre> searches for the term you've entered</p>
+        <p><pre>I'M FEELING LUCKY</pre> searches for a random noun</p>
+    </div>
+    <div class="submissions">
+            <input type="text" id="word">
+            <br>    
+            <div class="buttons">
+                <input type="button" id="submit" value="LET'S GO">
+                <input type="button" id="submit-random" value="I'M FEELING LUCKY">
+            </div>
+    </div>
+    <div class="resultbox">
+        <h2><span id="result"></span></h2>
+    </div>
+</body>
+</html>

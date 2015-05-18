@@ -1,0 +1,59 @@
+body {
+    background-color: #00BFFF;
+    font-family: sans-serif;
+}
+
+pre {
+    display: inline;
+}
+
+h1, .rules {
+    color: #424242;
+}
+h1 {
+    background-color: #1E90FF;
+    border: 1px solid white;
+    box-shadow: 0 0 2px white;
+}
+
+.rules {
+    margin-left: 20px;
+    border: 1px solid white;
+    width: 50%;
+    margin: 25px;
+}
+
+input, #suggestion {
+    margin: 5px;
+}
+
+input[type="text"], #suggestion {
+    font-size: 22pt;
+    min-width: 80%;
+}
+
+input[type="button"] {
+    font-size: 18pt;
+}
+
+h1, input, fieldset {
+    text-align: center;
+}
+
+.submissions {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    text-align: center;
+}
+
+.resultbox {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    min-height: 150px;
+    text-align: center;
+    color: red;
+    font-size: 24pt;
+    border: 4px solid white;
+}
