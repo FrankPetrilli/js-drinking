@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 /* Statics */
-app.set('port', 8080);
+app.set('port', process.env.PORT || 8080);
 
 // Serve the static directory for client stuff.
 app.use('/', express.static('static'));
