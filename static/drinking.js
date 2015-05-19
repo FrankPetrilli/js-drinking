@@ -2,6 +2,7 @@ var req;
 var word;
 var result;
 var xmlHttpTimeout;
+var clearTimeout;
 window.onload = function() {
 	req = new XMLHttpRequest();
 
@@ -49,6 +50,7 @@ function getRandomWord() {
 function packageFound(responseText) {
 	var response = JSON.parse(responseText);
 	if (response.success) {
+		clearInterval(clearTimeout);
 		if (response.exists) {
 			result.innerHTML = 'Take a drink!';
 			result.innerHTML += '<br>';
@@ -56,7 +58,7 @@ function packageFound(responseText) {
 		} else {
 			result.innerHTML = 'You\'re safe.';
 		}
-		setTimeout(clear, 7000);
+		clearTimeout = setTimeout(clear, 7000);
 	}
 }
 
