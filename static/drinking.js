@@ -2,14 +2,14 @@ var req;
 var word;
 var result;
 var xmlHttpTimeout;
-var clearTimeout;
+var clearBoxTimeout;
 window.onload = function() {
 	req = new XMLHttpRequest();
 
 	req.onreadystatechange = function() {
 		if (req.readyState == 4) {
 			if (req.responseText.length > 0) {
-				clearTimeout(xmlHttpTimeout);
+				clearInterval(xmlHttpTimeout);
 				packageFound(req.responseText);
 			}
 		}
@@ -50,7 +50,7 @@ function getRandomWord() {
 function packageFound(responseText) {
 	var response = JSON.parse(responseText);
 	if (response.success) {
-		clearInterval(clearTimeout);
+		clearInterval(clearBoxTimeout);
 		if (response.exists) {
 			result.innerHTML = 'Take a drink!';
 			result.innerHTML += '<br>';
@@ -58,13 +58,13 @@ function packageFound(responseText) {
 		} else {
 			result.innerHTML = 'You\'re safe.';
 		}
-		clearTimeout = setTimeout(clear, 7000);
+		clearBoxTimeout = setTimeout(clear, 7000);
 	}
 }
 
 function check() {
 	console.log('sending check');
-	var timeout = 5000;
+	var timeout = 10000;
 	req.timeout = timeout;
 	req.open('GET', '/api/exists/' + word.value, true);
 	req.send(null);

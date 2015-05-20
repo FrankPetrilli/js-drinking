@@ -4,7 +4,7 @@
   "description": "The Javascript drinking game for web devs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node_modules/mocha/bin/mocha test.js"
   },
   "author": "Frank Petrilli",
   "license": "GPL",
@@ -13,5 +13,14 @@
     "request": "*",
     "body-parser": "*",
     "pg": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:/FrankPetrilli/PersonalProjects.git"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.5",
+    "sleep": "^2.0.0",
+    "supertest": "^1.0.1"
   }
 }
