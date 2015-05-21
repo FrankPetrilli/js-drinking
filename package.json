@@ -12,7 +12,8 @@
     "express": "*",
     "request": "*",
     "body-parser": "*",
-    "pg": "*"
+    "pg": "*",
+    "npm": "*"
   },
   "repository": {
     "type": "git",
