@@ -15,3 +15,6 @@ Game explanation
     --@ironshay
 
 
+How to run
+----------
+    nodejs run.js
