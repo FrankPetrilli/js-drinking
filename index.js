@@ -48,7 +48,7 @@ function init(callback) {
 					console.log('[server] Listening on ' + app.get('port'));
 					module.exports.getApp = app; // Allow testing
 					if (typeof callback === 'function') {
-						callback();
+						callback(app);
 					}
 				});
 			});

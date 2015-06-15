@@ -14,7 +14,7 @@ router.use(function(req, res, next) {
 // Returns success, exists (which is the thing that really matters), link, which leads back to the npm page, 
 // and name, which was the name of the package which we searched for.
 router.route('/exists/:packagename').get(function(req, res) {
-	console.log('[router] Searching for ' + req.params.packagename);
+	//console.log('[router] Searching for ' + req.params.packagename);
 	// Generate a link for the user to find the package on npmjs.
 	var link = 'https://www.npmjs.com/package/' + req.params.packagename;
 	var args = ['description', 'version'];

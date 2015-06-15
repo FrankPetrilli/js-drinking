@@ -2,7 +2,6 @@ A Javascript drinking game.
 ===========================
 
 
-
 Game explanation
 ----------------
 
@@ -18,3 +17,8 @@ Game explanation
 How to run
 ----------
     nodejs run.js
+
+Public Demo
+-----------
+
+A public demo of this project is available [here](http://js-drinking.projects.frank.petril.li).
